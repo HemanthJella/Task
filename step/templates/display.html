@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+</head>
+
+<style media="screen">
+
+body {
+    background-color: #f5f7fa;
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+</style>
+
+<body>
+    <form method="POST">
+    <center>
+        <br><br>
+        <div class='container'  style="background-color:white;">
+        <div class='h2'>Details</div><br>
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Basic</th>
+                <th>Electrical</th>
+                <th>Mechanical</th>
+                <th>Installation</th>
+                <th>Water</th>
+                
+            </tr>
+            {% for det in listing %}
+            <tr>
+                <td>{{ det.Name }}</td>
+                <td>{{ det.Basic }}</td>
+                <td>{{ det.Electrical }}</td>
+                <td>{{ det.Mechanical }}</td>
+                <td>{{ det.Installation }}</td>
+                <td>{{ det.Water }}</td>
+                
+            </tr>
+            {% endfor %}
+      </table>
+      <br>
+        
+            <!-- <input id="submit" type="button" value="Back Home" /> -->
+       
+      <br>
+      </div>
+    </center>
+    </form> 
+
+</body>
+</html>

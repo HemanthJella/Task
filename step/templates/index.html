@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Choose</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<body>
+
+<div class="container">
+<form id="regForm" action="{% url 'choose' %}" method="POST">
+  
+{% csrf_token %}
+
+  <h1>Details:</h1>
+
+  <div class="tab">Time:
+    <div class="form-group">
+        <input type="datetime-local" class="form-control" placeholder="Enter date-time" name="time">
+    </div>
+
+    <div class="checkbox">
+      <label><input type="checkbox" name="basic1">Basic Checkup</label>
+    </div>
+    
+    <div class="checkbox">
+        <label><input type="checkbox" name="electrical1">Electrical Checkup</label>
+    </div>
+    
+    <div class="checkbox">
+        <label><input type="checkbox" name="mechanical1">Mechanical Checkup</label>
+    </div>
+    
+    <div class="checkbox">
+        <label><input type="checkbox" name="installation1">Installation Work</label>
+    </div>
+    
+    <div class="checkbox">
+        <label><input type="checkbox" name="water1">Chill Water System</label>
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+    
+  </div>
+
+</form>
+</div>
+
+
+</body>
+</html>
